@@ -1,5 +1,7 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  word = word.replace(/[^a-zA-Z]/g, '').toLowerCase();
+
+  return word === word.split('').reverse().join('');
 }
 
 /* 
@@ -7,7 +9,8 @@ function isPalindrome(word) {
 */
 
 /*
-  Add written explanation of your solution here
+  Takes  a single string argument, word, and checks whether
+   it's a palindrome while ignoring non-alphabet characters and considering only lowercase letters.
 */
 
 // You can run `node index.js` to view these console logs
